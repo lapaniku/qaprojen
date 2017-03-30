@@ -29,5 +29,5 @@ instances <- function(date) {
   summary(Tbatsfit)
   tbatsf <- forecast(Tbatsfit, h=hours)
 
-  as.numeric(tbatsf$mean)
+  round(as.numeric(tbatsf$mean))
 }
