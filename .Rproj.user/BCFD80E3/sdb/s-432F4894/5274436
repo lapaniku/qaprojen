@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(qaprojen)\n\ni <- instances(\"2017-03-29 23:00\")\ni\n",
+    "created" : 1490815095159.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1759349839",
+    "id" : "5274436",
+    "lastKnownWriteTime" : 1490821111,
+    "last_content_update" : 1490821111734,
+    "path" : "~/Desktop/RocketScience/qaprojen/test.R",
+    "project_path" : "test.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

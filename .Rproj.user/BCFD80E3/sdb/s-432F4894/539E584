@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @docType data\n\"jenkins\"\n\n#' @import lubridate\n#' @import magrittr\n#' @import dplyr\n#' @import xts\n#' @import zoo\n#' @import scales\n#' @import forecast\n#' @export \n\ninstances <- function(date) {\n  data(jenkins)\n    \n  ts <- jenkins %>% \n     select(datetime, Busy.executors)\n  \n  t <- xts(ts$Busy.executors, ts$datetime)\n\n  ts.h <- ts(to.hourly(t)$t.High, frequency = 24)\n  ts.h\n\n  last_time <- tail(ts$datetime, n=1)\n  i <- interval(last_time, ymd_hm(date))\n  hours <- as.numeric(i)/3600\n\n  Tbatsfit <- tbats(ts.h)\n  summary(Tbatsfit)\n  tbatsf <- forecast(Tbatsfit, h=hours)\n\n  as.numeric(tbatsf$mean)\n}",
+    "created" : 1490800360846.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3717522079",
+    "id" : "539E584",
+    "lastKnownWriteTime" : 1490821293,
+    "last_content_update" : 1490821293003,
+    "path" : "~/Desktop/RocketScience/qaprojen/R/instances.R",
+    "project_path" : "R/instances.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,11 @@
+Package: qaprojen
+Title: Jenkins busy executors prediction
+Version: 0.1
+Authors@R: person("Andrei", "Lapanik", email = "lapanik@rocketscience.ai",
+                  role = c("aut", "cre"))
+Description: TS prediction
+Depends:
+    R (>= 3.1.0)
+License: What license is it under?
+LazyData: true
+RoxygenNote: 5.0.1
